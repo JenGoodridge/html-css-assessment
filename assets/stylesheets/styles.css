@@ -1,15 +1,20 @@
-html, body,  {
+html,
+body {
     background-color: white;
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-family: 'Cabin', sans-serif;
+    font-family: "Cabin", "Open Sans", "Helvetica Neue", sans-serif;
     margin: 0;
     padding: 0;
 }
 
-h1, h2, h3, h4, p, button, form {
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-family: 'Cabin', sans-serif;
-    color:#0A162B;
+h1,
+h2,
+h3,
+h4,
+p,
+button,
+form {
+    font-family: "Cabin", "Open Sans", "Helvetica Neue", sans-serif;
+    color: #0a162b;
     font-size: 1rem;
     margin: 0;
     padding: 10px 0;
@@ -27,9 +32,9 @@ h2 {
 h3 {
     font-size: 1.25rem;
     line-height: 1.5rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 700;
-    letter-spacing: .05rem;
+    letter-spacing: 0.05rem;
     text-align: center;
     width: 70%;
 }
@@ -42,7 +47,7 @@ button {
     width: 100%;
     height: 50px;
     margin: 5px 0;
-    background-color: #FFC327;
+    background-color: #ffc327;
     font-size: 1.125rem;
 }
 
@@ -64,24 +69,24 @@ form {
 }
 
 select {
-  appearance: none;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  padding: 0 0 0 0;
-  margin: 0;
-  width: 100%;
-  font-family: inherit;
-  font-size: inherit;
-  cursor: inherit;
-  line-height: inherit;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0 0 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
 }
 
 #degree-select {
-    border: 2px solid #D0D0D0;
+    border: 2px solid #d0d0d0;
     background: none;
     border-radius: 5px;
-    height: 50px !important;
+    height: 50px;
     width: 100%;
 }
 
@@ -103,7 +108,6 @@ select {
 }
 
 .section {
-    border-bottom: 3px solid black;
     padding: 25px 0px;
     width: 90vw;
     max-width: 1080px;
@@ -116,19 +120,26 @@ select {
 .section__skills {
     width: 100vw;
     max-width: 100vw;
-    background-color: #F3FBFF;
+    background-color: #f3fbff;
 }
 
 .section__search-degree {
     display: flex;
     flex-direction: column;
     align-content: center;
-    align-items: center;   
+    align-items: center;
+    border-bottom: 3px solid #0a162b;
+    border-top: 3px solid #0a162b;
+    margin: 0 0 20px 0;
 }
 
 .section__search-degree p {
     padding: 0;
     font-size: 0.75rem;
+}
+
+.search-degree__text-align {
+    text-align: center;
 }
 
 .text__underline {
@@ -144,7 +155,7 @@ select {
 .job-links p {
     font-weight: 700;
     padding: 10px;
-    width: 24%;
+    width: 25%;
 }
 
 .grid-outer {
@@ -168,7 +179,7 @@ select {
     height: 24%;
     border-radius: 6px;
     background-color: white;
-    box-shadow: 0px 4px 15px 0px #0000000D;
+    box-shadow: 0px 4px 15px 0px #0000000d;
 }
 
 .grid-cell p {
@@ -176,7 +187,7 @@ select {
 }
 
 /* Tablet Sized Screens */
-@media only screen and (min-width:650px) { 
+@media only screen and (min-width: 650px) {
     .job-links p {
         width: auto;
     }
@@ -185,6 +196,7 @@ select {
         display: flex;
         width: 50vw;
     }
+
     button {
         margin: 0 1rem;
         width: 10rem;
@@ -209,15 +221,21 @@ select {
         height: 15rem;
     }
 }
+
 /* Desktop Screens */
-@media only screen and (min-width:1080px) { 
+@media only screen and (min-width: 1080px) {
+    form {
+        width: 40vw;
+    }
+
     .section__search-degree {
         flex-direction: row;
         align-content: center;
         align-items: center;
         justify-content: space-evenly;
-
     }
 
-
+    .search-degree__text-align {
+        text-align: left;
+    }
 }
