@@ -1,14 +1,17 @@
 @font-face {
      font-family: "Cabin";
+     font-display: fallback;
      src: local("Cabin"), url("../fonts/Cabin-Regular.ttf") format("truetype");
 }
  @font-face {
      font-family: "Cabin";
+     font-display: fallback;
      font-weight: 700;
      src: local("Cabin Bold"), url("../fonts/Cabin-Bold.ttf") format("truetype");
 }
  @font-face {
      font-family: "Open Sans";
+     font-display: fallback;
      font-weight: 700;
      src: local("Open Sans Bold"), url("../fonts/OpenSans-Bold.ttf") format("truetype");
 }
