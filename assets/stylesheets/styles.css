@@ -1,7 +1,25 @@
+@font-face {
+    font-family: 'Cabin';
+    src: local('Cabin'), url('../fonts/Cabin-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cabin';
+    font-weight: 700;
+    src: local('Cabin Bold'), url('../fonts/Cabin-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    src: local('Open Sans Bold'), url('../fonts/OpenSans-Bold.ttf') format('truetype');
+}
+
 html,
 body {
     background-color: white;
-    font-family: "Cabin", "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: "Cabin", sans-serif;
+    font-weight: 400;
     margin: 0;
     padding: 0;
 }
@@ -13,7 +31,7 @@ h4,
 p,
 button,
 form {
-    font-family: "Cabin", "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: "Cabin", sans-serif;
     color: #0a162b;
     font-size: 1rem;
     margin: 0;
@@ -90,10 +108,6 @@ select {
     width: 100%;
 }
 
-#badge {
-    width: 200px;
-}
-
 .flex__column {
     display: flex;
     flex-direction: column;
@@ -148,6 +162,10 @@ select {
 
 .job-links {
     width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
     justify-content: space-around;
 }
@@ -180,6 +198,11 @@ select {
     border-radius: 6px;
     background-color: white;
     box-shadow: 0px 4px 15px 0px #0000000d;
+}
+
+.grid-cell img {
+    height: auto;
+    width: auto;
 }
 
 .grid-cell p {
