@@ -1,21 +1,92 @@
-html, body {
+html, body,  {
     background-color: white;
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Cabin', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-h1, p {
-    padding: 0;
-    margin: 0;
+h1, h2, h3, h4, p, button, form {
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Cabin', sans-serif;
+    color:#0A162B;
     font-size: 1rem;
+    margin: 0;
+    padding: 10px 0;
 }
-/* All sections will be centered using flex */
-main {
+
+h1 {
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 1.25rem;
+    padding: 10px 0 0 0;
+}
+
+h3 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    letter-spacing: .05rem;
+    text-align: center;
+    width: 70%;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 35px;
+    width: 100%;
+    height: 50px;
+    margin: 5px 0;
+    background-color: #FFC327;
+    font-size: 1.125rem;
+}
+
+button:focus {
+    outline: none;
+}
+
+body {
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
+}
+
+form {
+    max-width: 1080px;
+    width: 90vw;
+    padding: 15px 0;
+}
+
+select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0 0 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+}
+
+#degree-select {
+    border: 2px solid #D0D0D0;
+    background: none;
+    border-radius: 5px;
+    height: 50px !important;
+    width: 100%;
+}
+
+#badge {
+    width: 200px;
 }
 
 .flex__column {
@@ -24,6 +95,7 @@ main {
     align-content: center;
     align-items: center;
 }
+
 .flex__row {
     display: flex;
     flex-direction: row;
@@ -31,6 +103,121 @@ main {
 }
 
 .section {
-    padding: 2rem 0rem;
     border-bottom: 3px solid black;
+    padding: 25px 0px;
+    width: 90vw;
+    max-width: 1080px;
+}
+
+.section:last-child {
+    border: none;
+}
+
+.section__skills {
+    width: 100vw;
+    max-width: 100vw;
+    background-color: #F3FBFF;
+}
+
+.section__search-degree {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;   
+}
+
+.section__search-degree p {
+    padding: 0;
+    font-size: 0.75rem;
+}
+
+.text__underline {
+    text-decoration: underline;
+}
+
+.job-links {
+    width: 95%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.job-links p {
+    font-weight: 700;
+    padding: 10px;
+    width: 24%;
+}
+
+.grid-outer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.grid-cell {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 5%;
+    width: 80%;
+    height: 24%;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 0px 4px 15px 0px #0000000D;
+}
+
+.grid-cell p {
+    line-height: 1.6;
+}
+
+/* Tablet Sized Screens */
+@media only screen and (min-width:650px) { 
+    .job-links p {
+        width: auto;
+    }
+
+    form {
+        display: flex;
+        width: 50vw;
+    }
+    button {
+        margin: 0 1rem;
+        width: 10rem;
+    }
+    .grid-outer {
+        margin: 0;
+        height: 38rem;
+        width: 80%;
+        max-width: 1080px;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .grid-cell {
+        padding: 1rem;
+        margin: 1rem 0.5rem 0 0.5rem;
+        width: 40%;
+        height: 15rem;
+    }
+}
+/* Desktop Screens */
+@media only screen and (min-width:1080px) { 
+    .section__search-degree {
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+
+
 }
